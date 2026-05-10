@@ -33,3 +33,15 @@ counter()
 counter()
 counter()
 counter()
+
+
+
+
+function display(){
+    let work = "Done! Great work"
+
+    setTimeout(() => {
+        console.log(work)
+    }, 1000)
+}
+display()
