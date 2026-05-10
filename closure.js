@@ -1,3 +1,5 @@
+const { increment, decrement } = require("three/tsl")
+
 function bank(){
     let myBalance = 10000
 
@@ -28,11 +30,10 @@ function outer(){
     }
     return inner;
 }
-let counter = outer()
-counter()
-counter()
-counter()
-counter()
+let counts = outer()
+counts()
+counts()
+
 
 
 
@@ -45,3 +46,32 @@ function display(){
     }, 1000)
 }
 display()
+
+
+
+
+function counter(){
+    let count = 0 
+
+    return{
+        increment(){
+            count++
+            console.log(count)
+        },
+        decrement(){
+            count--;
+            console.log(count)
+        },
+        reset(){
+            count = 0;
+            console.log()
+        }
+    }
+}
+let i = counter()
+i.increment()
+i.increment()
+i.increment()
+i.decrement()
+i.decrement()
+i.reset()
