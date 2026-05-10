@@ -75,3 +75,44 @@ i.increment()
 i.decrement()
 i.decrement()
 i.reset()
+
+
+
+function multiply(x){
+    return function(y){
+        return x * y;
+    }
+}
+
+let mul = multiply(5)
+console.log(mul(10))
+
+
+
+function addition(x){
+    return function(y){
+        return x + y
+    }
+}
+let add = addition(10)
+console.log(add(11))
+
+
+
+function subtraction(x){
+    return function(y){
+        return x - y
+    }
+}
+let sub = subtraction(44)
+console.log(sub(55))
+
+
+function division(x){
+    return function(y){
+        return x/y
+    }
+}
+let div = division(22)
+
+console.log(sub(100))
